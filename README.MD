@@ -1,4 +1,4 @@
-# Vanilla JS Weather APP
+# Vanilla JS Weather APP ☀️
 
 The goal of this assignment is to build a vanilla JavaScript weather app.
 
@@ -22,6 +22,20 @@ Check the live demo here: [live demo](https://vanilla-js-weather-app-codewithdra
 
 ![oracle app demo](./weather-in-madrid.png)
 ![oracle app with phrase demo](./weather-in-dublin.png)
+
+## Hints
+
+1. You need to get an api key from https://openweathermap.org/api .
+2. Create an account and get your api key.
+3. Create a function that will listen to the users key press and fetches the weater if the user presses the "Enter" key.
+4. Once the data is fetched, make the necesary dome chenges. Use the propertis fromt he response to add the ncesary data to the user interface.
+
+
+## Bonus
+
+If the tempeture is higher than 23 degrees, change the background to a warmer picture. 
+
+Your users will be delighted.
 
 ## Final words
 
