@@ -1,5 +1,5 @@
 var dateElement = document.getElementsByClassName("date");
-var locationElement = document.getElementsByClassName("location");
+var locationElement =  document.getElementById("location");
 var tempElement = document.getElementsByClassName("temp");
 var weatherElement = document.getElementsByClassName("weather");
 var searchBar = document.getElementById("search-bar");
@@ -23,7 +23,7 @@ function fetchWeather(e) {
       .then((data) => {
         console.log(data.name);
         dateElement.innerHTML = buildDate();
-        document.getElementById("location").innerText = data.name;
+       .innerText = data.name;
         tempElement.innerText = data.main.temp;
       });
   }
