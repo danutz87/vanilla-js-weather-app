@@ -2,6 +2,16 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.app {
+  background-image: url(./cold.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.warm {
+  background-image: url(./warm.jpeg);
+}
+
 .main {
   min-height: 100vh;
   padding: 25px;
@@ -17,12 +27,6 @@
     rgba(0, 0, 0, 0.25),
     rgba(0, 0, 0, 0.75)
   );
-}
-
-.app {
-  background-image: url(./mountain.jpeg);
-  background-size: cover;
-  background-position: bottom;
 }
 
 .search-box {

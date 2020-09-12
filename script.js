@@ -18,11 +18,15 @@ function fetchWeather(e) {
         return resp.json();
       })
       .then((data) => {
-        console.log(data);
         dateElement.innerHTML = buildDate();
         locationElement.innerText = data.name;
         tempElement.innerText = data.main.temp;
-        // weatherElement.innerText = data.
+        weatherElement.innerText = data.weather[0].main;
+        if (data.main.temp > 23) {
+          document.getElementById("app").classList.add("warm");
+        } else {
+          document.getElementById("app").classList.remove("warm");
+        }
       });
   }
 }
