@@ -1,7 +1,8 @@
-const date = document.getElementsByClassName("date");
-const location = document.getElementsByClassName("location");
-const temp = document.getElementsByClassName("temp");
-const weather = document.getElementsByClassName("weather");
+var dateElement = document.getElementsByClassName("date");
+var locationElement = document.getElementsByClassName("location");
+var tempElement = document.getElementsByClassName("temp");
+var weatherElement = document.getElementsByClassName("weather");
+var searchBar = document.getElementById("search-bar");
 
 const data = {
   api_key: "53378ee977b0303b6607dd81e9c50a3b",
@@ -9,6 +10,7 @@ const data = {
 };
 
 function fetchWeather(e) {
+  console.log("values", searchBar.value);
   if (e.key == "Enter") {
     fetch(
       `${data.url_base}weather?q=${data.query}&units=metric&APPID=${data.api_key}`
@@ -19,6 +21,8 @@ function fetchWeather(e) {
       .then((data) => console.log(data));
   }
 }
+
+searchBar.addEventListener("onsubmit", fetchWeather);
 
 function buildDate() {
   let d = new Date();
