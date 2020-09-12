@@ -4,7 +4,7 @@ The goal of this assignment is to build a vanilla JavaScript weather app.
 
 Use the provided markup as a guide.
 
-# Aceptance Criteria
+## Aceptance Criteria
 
 ```
 As a user I want to see the weather in different cities.
