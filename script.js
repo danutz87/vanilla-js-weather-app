@@ -4,25 +4,32 @@ var tempElement = document.getElementsByClassName("temp");
 var weatherElement = document.getElementsByClassName("weather");
 var searchBar = document.getElementById("search-bar");
 
-const data = {
+const variables = {
   api_key: "53378ee977b0303b6607dd81e9c50a3b",
   url_base: "https://api.openweathermap.org/data/2.5/",
 };
 
 function fetchWeather(e) {
-  console.log("values", searchBar.value);
+  console.log("I trigger");
   if (e.key == "Enter") {
+    console.log(searchBar);
+    var city = searchBar.value;
     fetch(
-      `${data.url_base}weather?q=${data.query}&units=metric&APPID=${data.api_key}`
+      `${variables.url_base}weather?q=${city}&units=metric&APPID=${variables.api_key}`
     )
       .then((resp) => {
         return resp.json();
       })
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data.name);
+        dateElement.innerHTML = buildDate();
+        document.getElementById("location").innerText = data.name;
+        tempElement.innerText = data.main.temp;
+      });
   }
 }
 
-searchBar.addEventListener("onsubmit", fetchWeather);
+document.addEventListener("keyup", fetchWeather);
 
 function buildDate() {
   let d = new Date();
