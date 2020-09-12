@@ -1,3 +1,8 @@
+const date = document.getElementsByClassName("date");
+const location = document.getElementsByClassName("location");
+const temp = document.getElementsByClassName("temp");
+const weather = document.getElementsByClassName("weather");
+
 const data = {
   api_key: "53378ee977b0303b6607dd81e9c50a3b",
   url_base: "https://api.openweathermap.org/data/2.5/",
@@ -6,12 +11,12 @@ const data = {
 function fetchWeather(e) {
   if (e.key == "Enter") {
     fetch(
-      `${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`
+      `${data.url_base}weather?q=${data.query}&units=metric&APPID=${data.api_key}`
     )
       .then((resp) => {
         return resp.json();
       })
-      .then(this.setResults);
+      .then((data) => console.log(data));
   }
 }
 
