@@ -1,7 +1,7 @@
-var dateElement = document.getElementsByClassName("date");
-var locationElement =  document.getElementById("location");
-var tempElement = document.getElementsByClassName("temp");
-var weatherElement = document.getElementsByClassName("weather");
+var dateElement = document.getElementById("date");
+var locationElement = document.getElementById("location");
+var tempElement = document.getElementById("temp");
+var weatherElement = document.getElementById("weather");
 var searchBar = document.getElementById("search-bar");
 
 const variables = {
@@ -10,21 +10,19 @@ const variables = {
 };
 
 function fetchWeather(e) {
-  console.log("I trigger");
   if (e.key == "Enter") {
-    console.log(searchBar);
-    var city = searchBar.value;
     fetch(
-      `${variables.url_base}weather?q=${city}&units=metric&APPID=${variables.api_key}`
+      `${variables.url_base}weather?q=${searchBar.value}&units=metric&APPID=${variables.api_key}`
     )
       .then((resp) => {
         return resp.json();
       })
       .then((data) => {
-        console.log(data.name);
+        console.log(data);
         dateElement.innerHTML = buildDate();
-       .innerText = data.name;
+        locationElement.innerText = data.name;
         tempElement.innerText = data.main.temp;
+        // weatherElement.innerText = data.
       });
   }
 }
