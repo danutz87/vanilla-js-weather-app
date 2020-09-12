@@ -29,7 +29,7 @@ Make sure you create a new repo by forking this one.
 
 Use meaningful commit names and save your work regularly.
 
-Deploy the app to Github pages.
+Deploy the app to Github pages or Netlify.
 
 ---
 
