@@ -1,4 +1,4 @@
-# Vanilla JS Weather APP ☀️
+# Vanilla JS Weather APP ☀️☀️☀️
 
 The goal of this assignment is to build a vanilla JavaScript weather app.
 
@@ -36,7 +36,7 @@ If the tempeture is higher than 23 degrees, change the background to a warmer pi
 
 Your users will be delighted.
 
-## Final words
+## Best Practices
 
 Make sure you create a new repo by forking this one.
 
