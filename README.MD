@@ -4,7 +4,7 @@ The goal of this assignment is to build a vanilla JavaScript weather app.
 
 Use the provided markup as a guide.
 
-## Aceptance Criteria
+## :ledger: Aceptance Criteria
 
 ```
 As a user I want to see the weather in different cities.
@@ -30,10 +30,9 @@ Check the live demo here: [live demo](https://vanilla-js-weather-app-codewithdra
 3. Create a function that will listen to the users key press and fetches the weater if the user presses the "Enter" key.
 4. Once the data is fetched, make the necesary dome chenges. Use the propertis fromt he response to add the ncesary data to the user interface.
 
+## Bonus :rocket::rocket::rocket:
 
-## Bonus
-
-If the tempeture is higher than 23 degrees, change the background to a warmer picture. 
+If the tempeture is higher than 23 degrees, change the background to a warmer picture.
 
 Your users will be delighted.
 
@@ -46,5 +45,7 @@ Use meaningful commit names and save your work regularly.
 Deploy the app to Github pages or Netlify.
 
 ---
+
+### Made with :orange_heart: in Berlin by @CodeWithDragos
 
 © 2019 - 2020 CodeWithDragos. All Rights Reserved.
